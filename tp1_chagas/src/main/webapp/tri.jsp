@@ -26,6 +26,7 @@
  </head>
 
  <body>
+     <%@include file="WEB-INF/jspf/menugrande.jspf" %>
   <h1>Legal</h1> 
 
  </body>
