@@ -5,7 +5,7 @@
  */
 package br.edu.iff.tp1_chagas.utilidades;
 
-import entidades.Usuario;
+import br.edu.iff.tp1_chagas.entidades.Usuario;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
@@ -28,7 +28,7 @@ public class HibernateUtil {
 //        return sessionFactory.openSession();
 //    }
     
-    private static SessionFactory factory;
+    private static final SessionFactory factory;
 
     static {
         AnnotationConfiguration cfg = new AnnotationConfiguration();
