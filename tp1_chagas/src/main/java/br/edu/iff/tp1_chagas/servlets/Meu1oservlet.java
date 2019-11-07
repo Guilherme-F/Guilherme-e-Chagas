@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.iff.tp1_chagas;
+package br.edu.iff.tp1_chagas.servlets;
       //br.edu.iff.tp1_chagas.Meu1oservlet
 import java.io.IOException;
 import java.io.PrintWriter;
