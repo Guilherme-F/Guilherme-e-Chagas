@@ -1,8 +1,17 @@
 package br.edu.iff.tp1_chagas.entidades;
 
+import java.io.Serializable;
+import java.math.BigDecimal;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
 
 /**
  *
@@ -66,7 +75,7 @@ public class Usuario implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idUsuario != null ? idUsuario.hashCode() : 0);
+        hash += (getIdUsuario() != null ? getIdUsuario().hashCode() : 0);
         return hash;
     }
 
@@ -77,7 +86,7 @@ public class Usuario implements Serializable {
             return false;
         }
         Usuario other = (Usuario) object;
-        if ((this.idUsuario == null && other.idUsuario != null) || (this.idUsuario != null && !this.idUsuario.equals(other.idUsuario))) {
+        if ((this.getIdUsuario() == null && other.getIdUsuario() != null) || (this.getIdUsuario() != null && !this.idUsuario.equals(other.idUsuario))) {
             return false;
         }
         return true;
@@ -85,7 +94,7 @@ public class Usuario implements Serializable {
 
     @Override
     public String toString() {
-        return "br.edu.iff.tp1_chagas.Usuario[ idUsuario=" + idUsuario + " ]";
+        return "br.edu.iff.tp1_chagas.Usuario[ idUsuario=" + getIdUsuario() + " ]";
     }
     
 }

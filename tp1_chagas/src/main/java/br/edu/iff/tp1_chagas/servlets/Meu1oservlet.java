@@ -5,12 +5,17 @@
  */
 package br.edu.iff.tp1_chagas.servlets;
       //br.edu.iff.tp1_chagas.Meu1oservlet
+import br.edu.iff.tp1_chagas.entidades.Usuario;
+import br.edu.iff.tp1_chagas.utilidades.HibernateUtil;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigDecimal;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -33,7 +38,24 @@ public class Meu1oservlet extends HttpServlet {
        String sobrenome = request.getParameter("sobrenome");
        String nomeCompleto = nome+" "+sobrenome;
        System.out.println("Nome completo: "+nomeCompleto);
+       String senha = request.getParameter("senha");
+       
+       Usuario user = new Usuario();
+       user.setNome(nomeCompleto);
+       user.setSenha(senha);
+       
+       Double aleatorio = Math.random();
+       BigDecimal id = new BigDecimal(aleatorio);
+       user.setIdUsuario(id);
+       
+       Session sessaoBD= HibernateUtil.getSession();
+       Transaction tr = sessaoBD.getTransaction();
+       sessaoBD.save(user);
+       tr.commit();
+       sessaoBD.close();
+       
        response.sendRedirect("tri.jsp");
+       
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
