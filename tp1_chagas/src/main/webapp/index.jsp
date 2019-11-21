@@ -219,7 +219,7 @@
  </table>
 </fieldset>
 <br />
-<input type="submit">
+<input type="submit" value="Enviar dados">
 <button formaction="http://localhost:3003/usuarios">Incluir</button>
 <button formaction="http://localhost:3003/usuarios2">Alterar</button>
 <input type="reset" value="Limpar">
