@@ -40,7 +40,14 @@ public class Usuario implements Serializable {
     @Size(max = 2147483647)
     @Column(name = "senha")
     private String senha;
-
+    @Size(max = 2147483647)
+    @Column(name = "rg")
+    private String rg;
+    @Size(max = 2147483647)
+    @Column(name = "cpf")
+    private String cpf;
+    
+    
     public Usuario() {
     }
 
@@ -72,6 +79,23 @@ public class Usuario implements Serializable {
         this.senha = senha;
     }
 
+    public String getRg() {
+        return rg;
+    }
+
+    public void setRg (String rg) {
+        this.rg = rg;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf (String cpf) {
+        this.cpf = cpf;
+    }
+   
+    
     @Override
     public int hashCode() {
         int hash = 0;
@@ -98,3 +122,4 @@ public class Usuario implements Serializable {
     }
     
 }
+ 

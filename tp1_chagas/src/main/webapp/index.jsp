@@ -101,7 +101,7 @@
         </select>
     </div--%>
   </fieldset>
-  <%--fieldset>
+  <fieldset>
     <legend>Dados de documentos</legend>
     <div>
     <label for="rg">RG: </label>
@@ -167,6 +167,10 @@
     <label for="cep">CEP: </label>
     <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
    </div>
+<<<<<<< HEAD
+=======
+</fieldset>
+>>>>>>> 45040886617512f939abebf9b955340f8f219476
 <br />
 
 <!-- DADOS DE LOGIN -->
